@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const fs = require("fs");
+//const fs = require("fs");
 
 const app = express();
 const PORT = 3000;
@@ -29,7 +29,7 @@ app.get("/imagine", async(req,res)=>{
         res.status(500).send('Error processing the request');
         }
 });
-app.use("/d", express.static(path.join(__dirname, "d")));
+//app.use("/d", express.static(path.join(__dirname, "d")));
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
